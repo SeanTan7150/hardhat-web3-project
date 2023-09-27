@@ -3,6 +3,7 @@ import dashboard from "./dashboard.svg";
 import logo from "./logo.svg";
 import logout from "./logout.svg";
 import menu from "./menu.svg";
+import money from "./money.svg";
 import payment from "./payment.svg";
 import profile from "./profile.svg";
 import search from "./search.svg";
@@ -16,6 +17,7 @@ export {
   logo,
   logout,
   menu,
+  money,
   payment,
   profile,
   search,

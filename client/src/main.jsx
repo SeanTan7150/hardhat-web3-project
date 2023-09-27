@@ -1,30 +1,29 @@
 import React from "react";
+import { Sepolia } from "@thirdweb-dev/chains";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 
 import {
+  ChainId,
   ThirdwebProvider,
   metamaskWallet,
   smartWallet,
 } from "@thirdweb-dev/react";
+import { StateContextProvider } from "./context";
 import "./styles/globals.css";
 
-const activeChain = "ethereum";
+// const activeChain = "ethereum";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
 root.render(
   <ThirdwebProvider
+    desiredChainId={ChainId.Sepolia}
     clientId={import.meta.env.VITE_TEMPLATE_CLIENT_ID}
-    activeChain={activeChain}
-    supportedWallets={[
-      smartWallet({
-        factoryAddress: "0x7848F53c78B8360DE8639920c76BA7d1019dA227",
-        gasless: true,
-        personalWallets: [metamaskWallet()],
-      }),
-    ]}
+    activeChain={Sepolia}
   >
-    <App />
+    <StateContextProvider>
+      <App />
+    </StateContextProvider>
   </ThirdwebProvider>
 );

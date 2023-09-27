@@ -19,17 +19,17 @@ const App = () => {
       <div className="flex-1 max-sm:w-full max-w-[1280px] mx-auto sm:pr-5">
         <BrowserRouter>
           <Navbar />
-        </BrowserRouter>
-        
-        <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/create-campaign" element={<CreateCampaign />} />
+            <Route path="/campaign-details" element={<CampaignDetails />} />
           </Routes>
         </BrowserRouter>
       </div>
     </div>
-  )
-}
+  );
+};
 
 // const App = ()=> {
 //   return (
