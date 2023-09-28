@@ -10,7 +10,8 @@ import {
   smartWallet,
 } from "@thirdweb-dev/react";
 import { StateContextProvider } from "./context";
-import "./styles/globals.css";
+import "./index.css";
+// import "./styles/globals.css";
 
 // const activeChain = "ethereum";
 
